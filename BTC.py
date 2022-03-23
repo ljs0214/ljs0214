@@ -83,7 +83,7 @@ class autoTrade :
         balance = upbit.get_balance() # 잔고 조회
         
         if balance > 5000 : # 잔고 5000원 이상일 때
-            upbit.buy_market_order(self.ticker, 10000)
+            upbit.buy_market_order(self.ticker, 50000)
 
             buy_price = pyupbit.get_orderbook(self.ticker)['orderbook_units'][0]['ask_price'] # 최우선 매도 호가
             print('====================매수 시도====================')
